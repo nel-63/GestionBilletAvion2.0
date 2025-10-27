@@ -1,0 +1,17 @@
+debug/DatabaseManager.o
+debug/main.o
+debug/ClientDAO.o
+debug/VolDAO.o
+debug/ReservationDAO.o
+debug/MainWindow.o
+debug/LoginDialog.o
+debug/ClientDialog.o
+debug/VolDialog.o
+debug/ReservationDialog.o
+debug/TicketWidget.o
+debug/moc_MainWindow.o
+debug/moc_LoginDialog.o
+debug/moc_ClientDialog.o
+debug/moc_VolDialog.o
+debug/moc_ReservationDialog.o
+debug/moc_TicketWidget.o

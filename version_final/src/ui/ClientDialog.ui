@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ClientDialog</class>
+ <widget class="QDialog" name="ClientDialog">
+  <property name="windowTitle"><string>Client</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item><widget class="QLineEdit" name="lineNom"><property name="placeholderText"><string>Nom</string></property></widget></item>
+   <item><widget class="QLineEdit" name="linePrenom"><property name="placeholderText"><string>Prénom</string></property></widget></item>
+   <item><widget class="QLineEdit" name="lineEmail"><property name="placeholderText"><string>Email</string></property></widget></item>
+   <item><widget class="QLineEdit" name="lineTelephone"><property name="placeholderText"><string>Téléphone</string></property></widget></item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonBox">
+     <item><widget class="QPushButton" name="btnCancel"><property name="text"><string>Annuler</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnSave"><property name="text"><string>Enregistrer</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

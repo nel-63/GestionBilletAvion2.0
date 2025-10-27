@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginDialog</class>
+ <widget class="QDialog" name="LoginDialog">
+  <property name="windowTitle"><string>Authentification</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text"><string>Bienvenue - Gestion Réservations</string></property>
+     <property name="alignment"><set>Qt::AlignCenter</set></property>
+    </widget>
+   </item>
+   <item><widget class="QLineEdit" name="lineUsername"><property name="placeholderText"><string>Nom d'utilisateur</string></property></widget></item>
+   <item>
+    <widget class="QLineEdit" name="linePassword">
+     <property name="echoMode"><enum>QLineEdit::Password</enum></property>
+     <property name="placeholderText"><string>Mot de passe</string></property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item><widget class="QPushButton" name="btnCancel"><property name="text"><string>Annuler</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnLogin"><property name="text"><string>Se connecter</string></property></widget></item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
