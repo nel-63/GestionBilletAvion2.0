@@ -1,8 +1,8 @@
 #include "TicketWidget.h"
 #include "ui_TicketWidget.h"
-#include "../dao/ReservationDAO.h"
-#include "../dao/ClientDAO.h"
-#include "../dao/VolDAO.h"
+#include "../dao/ReservationFonction.h"
+#include "../dao/ClientFonction.h"
+#include "../dao/VolFonction.h"
 #include <QPrinter>
 #include <QFileDialog>
 #include <QMessageBox>
@@ -23,11 +23,11 @@ TicketWidget::~TicketWidget() { delete ui; }
 void TicketWidget::buildTicket()
 {
     if (m_reservationId == -1) { ui->textTicket->setPlainText("Réservation non trouvée."); return; }
-    auto r = ReservationDAO::byId(m_reservationId);
+    auto r = ReservationFonction::byId(m_reservationId);
     if (r.id == -1) { ui->textTicket->setPlainText("Réservation non trouvée."); return; }
 
-    auto c = ClientDAO::byId(r.clientId);
-    auto v = VolDAO::byId(r.volId);
+    auto c = ClientFonction::byId(r.clientId);
+    auto v = VolFonction::byId(r.volId);
 
     QString html;
     html += "<h2>Billet électronique - Compagnie Aérienne</h2>";

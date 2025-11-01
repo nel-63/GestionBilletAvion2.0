@@ -68,6 +68,7 @@ public:
     QWidget *pageReservations;
     QVBoxLayout *verticalLayout_5;
     QHBoxLayout *reservActions;
+    QLineEdit *lineResSearch;
     QPushButton *btnResAdd;
     QPushButton *btnResEdit;
     QPushButton *btnResDelete;
@@ -138,6 +139,9 @@ public:
         verticalLayout_2->setObjectName("verticalLayout_2");
         lblDashboardTitle = new QLabel(pageDashboard);
         lblDashboardTitle->setObjectName("lblDashboardTitle");
+        lblDashboardTitle->setStyleSheet(QString::fromUtf8("font-size: 40px;\n"
+"text-align: center;\n"
+"color :white;"));
 
         verticalLayout_2->addWidget(lblDashboardTitle);
 
@@ -145,16 +149,25 @@ public:
         statsLayout->setObjectName("statsLayout");
         lblTotalVols = new QLabel(pageDashboard);
         lblTotalVols->setObjectName("lblTotalVols");
+        lblTotalVols->setStyleSheet(QString::fromUtf8("font-size: 30px;\n"
+"text-align: center;\n"
+"color :white;"));
 
         statsLayout->addWidget(lblTotalVols);
 
         lblTotalClients = new QLabel(pageDashboard);
         lblTotalClients->setObjectName("lblTotalClients");
+        lblTotalClients->setStyleSheet(QString::fromUtf8("font-size: 30px;\n"
+"text-align: center;\n"
+"color :white;"));
 
         statsLayout->addWidget(lblTotalClients);
 
         lblTotalReservations = new QLabel(pageDashboard);
         lblTotalReservations->setObjectName("lblTotalReservations");
+        lblTotalReservations->setStyleSheet(QString::fromUtf8("font-size: 30px;\n"
+"text-align: center;\n"
+"color :white;"));
 
         statsLayout->addWidget(lblTotalReservations);
 
@@ -238,6 +251,11 @@ public:
         verticalLayout_5->setObjectName("verticalLayout_5");
         reservActions = new QHBoxLayout();
         reservActions->setObjectName("reservActions");
+        lineResSearch = new QLineEdit(pageReservations);
+        lineResSearch->setObjectName("lineResSearch");
+
+        reservActions->addWidget(lineResSearch);
+
         btnResAdd = new QPushButton(pageReservations);
         btnResAdd->setObjectName("btnResAdd");
 
@@ -274,6 +292,9 @@ public:
 
         retranslateUi(MainWindow);
 
+        stackedWidget->setCurrentIndex(0);
+
+
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
@@ -286,18 +307,19 @@ public:
         btnVols->setText(QCoreApplication::translate("MainWindow", "Vols", nullptr));
         btnReservations->setText(QCoreApplication::translate("MainWindow", "R\303\251servations", nullptr));
         btnLogout->setText(QCoreApplication::translate("MainWindow", "D\303\251connexion", nullptr));
-        lblDashboardTitle->setText(QCoreApplication::translate("MainWindow", "Tableau de bord", nullptr));
+        lblDashboardTitle->setText(QCoreApplication::translate("MainWindow", "                            aper\303\247u", nullptr));
         lblTotalVols->setText(QCoreApplication::translate("MainWindow", "Vols: 0", nullptr));
         lblTotalClients->setText(QCoreApplication::translate("MainWindow", "Clients: 0", nullptr));
         lblTotalReservations->setText(QCoreApplication::translate("MainWindow", "R\303\251servations: 0", nullptr));
-        lineClientSearch->setPlaceholderText(QCoreApplication::translate("MainWindow", "Rechercher un client...", nullptr));
+        lineClientSearch->setPlaceholderText(QCoreApplication::translate("MainWindow", "Rechercher Ex  id:2  nom:Dupont emai:Dupont@gmail.com", nullptr));
         btnClientAdd->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
         btnClientEdit->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
         btnClientDelete->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
-        lineVolSearch->setPlaceholderText(QCoreApplication::translate("MainWindow", "Rechercher un vol...", nullptr));
+        lineVolSearch->setPlaceholderText(QCoreApplication::translate("MainWindow", "Recherche  Ex  id:1  code:AE13  date:2025-10-30  heure:08:30<heure  prix:500<prix<1000", nullptr));
         btnVolAdd->setText(QCoreApplication::translate("MainWindow", "Ajouter", nullptr));
         btnVolEdit->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
         btnVolDelete->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));
+        lineResSearch->setPlaceholderText(QCoreApplication::translate("MainWindow", "Recherche Ex id:5 destination:paris date:2024-11-10", nullptr));
         btnResAdd->setText(QCoreApplication::translate("MainWindow", "Nouvelle r\303\251servation", nullptr));
         btnResEdit->setText(QCoreApplication::translate("MainWindow", "Modifier", nullptr));
         btnResDelete->setText(QCoreApplication::translate("MainWindow", "Supprimer", nullptr));

@@ -35,11 +35,12 @@ public:
     {
         if (LoginDialog->objectName().isEmpty())
             LoginDialog->setObjectName("LoginDialog");
+        LoginDialog->resize(193, 126);
         verticalLayout = new QVBoxLayout(LoginDialog);
         verticalLayout->setObjectName("verticalLayout");
         titleLabel = new QLabel(LoginDialog);
         titleLabel->setObjectName("titleLabel");
-        titleLabel->setAlignment(Qt::AlignCenter);
+        titleLabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
 
         verticalLayout->addWidget(titleLabel);
 
@@ -50,7 +51,7 @@ public:
 
         linePassword = new QLineEdit(LoginDialog);
         linePassword->setObjectName("linePassword");
-        linePassword->setEchoMode(QLineEdit::Password);
+        linePassword->setEchoMode(QLineEdit::EchoMode::Password);
 
         verticalLayout->addWidget(linePassword);
 
@@ -71,6 +72,9 @@ public:
 
 
         retranslateUi(LoginDialog);
+
+        btnLogin->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(LoginDialog);
     } // setupUi

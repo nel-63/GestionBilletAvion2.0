@@ -1,8 +1,8 @@
 release/DatabaseManager.o
+release/ClientFonction.o
+release/ReservationFonction.o
+release/VolFonction.o
 release/main.o
-release/ClientDAO.o
-release/VolDAO.o
-release/ReservationDAO.o
 release/MainWindow.o
 release/LoginDialog.o
 release/ClientDialog.o

@@ -7,10 +7,10 @@ CONFIG += c++17
 
 SOURCES += \
     src/DatabaseManager.cpp \
+    src/dao/ClientFonction.cpp \
+    src/dao/ReservationFonction.cpp \
+    src/dao/VolFonction.cpp \
     src/main.cpp \
-    src/dao/ClientDAO.cpp \
-    src/dao/VolDAO.cpp \
-    src/dao/ReservationDAO.cpp \
     src/ui/MainWindow.cpp \
     src/ui/LoginDialog.cpp \
     src/ui/ClientDialog.cpp \
@@ -19,12 +19,12 @@ SOURCES += \
     src/ui/TicketWidget.cpp
 
 HEADERS += \
+    src/dao/ClientFonction.h \
+    src/dao/ReservationFonction.h \
+    src/dao/VolFonction.h \
     src/database/DatabaseManager.h \
     src/models/Client.h \
     src/models/Reservation.h \
-    src/dao/ClientDAO.h \
-    src/dao/VolDAO.h \
-    src/dao/ReservationDAO.h \
     src/models/Vol.h \
     src/ui/MainWindow.h \
     src/ui/LoginDialog.h \

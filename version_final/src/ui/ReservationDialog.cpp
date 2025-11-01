@@ -1,8 +1,8 @@
 #include "ReservationDialog.h"
 #include "ui_ReservationDialog.h"
-#include "../dao/ClientDAO.h"
-#include "../dao/VolDAO.h"
-#include "../dao/ReservationDAO.h"
+#include "../dao/ClientFonction.h"
+#include "../dao/VolFonction.h"
+#include "../dao/ReservationFonction.h"
 #include <QMessageBox>
 
 ReservationDialog::ReservationDialog(QWidget *parent, int reservationId)
@@ -11,8 +11,8 @@ ReservationDialog::ReservationDialog(QWidget *parent, int reservationId)
     ui->setupUi(this);
     ui->dateReservation->setCalendarPopup(true);
     ui->dateReservation->setDate(QDate::currentDate());
-   // connect(ui->btnCancel, &QPushButton::clicked, this, &ReservationDialog::on_btnCancel_clicked);
-   // connect(ui->btnSave, &QPushButton::clicked, this, &ReservationDialog::on_btnSave_clicked);
+    // connect(ui->btnCancel, &QPushButton::clicked, this, &ReservationDialog::on_btnCancel_clicked);
+    // connect(ui->btnSave, &QPushButton::clicked, this, &ReservationDialog::on_btnSave_clicked);
     populateCombos();
     if (m_reservationId != -1) loadReservation();
 }
@@ -22,11 +22,11 @@ ReservationDialog::~ReservationDialog() { delete ui; }
 void ReservationDialog::populateCombos()
 {
     ui->comboClient->clear();
-    auto clients = ClientDAO::all();
+    auto clients = ClientFonction::all();
     for (const auto &c : clients) ui->comboClient->addItem(QString("%1 %2").arg(c.nom).arg(c.prenom), c.id);
 
     ui->comboVol->clear();
-    auto vols = VolDAO::all();
+    auto vols = VolFonction::all();
     for (const auto &v : vols) ui->comboVol->addItem(QString("%1 - %2").arg(v.code).arg(v.destination), v.id);
 
     ui->comboStatut->clear();
@@ -35,7 +35,7 @@ void ReservationDialog::populateCombos()
 
 void ReservationDialog::loadReservation()
 {
-    auto r = ReservationDAO::byId(m_reservationId);
+    auto r = ReservationFonction::byId(m_reservationId);
     int idxClient = ui->comboClient->findData(r.clientId);
     if (idxClient != -1) ui->comboClient->setCurrentIndex(idxClient);
     int idxVol = ui->comboVol->findData(r.volId);
@@ -54,10 +54,10 @@ void ReservationDialog::on_btnSave_clicked()
     r.statut = ui->comboStatut->currentText();
 
     if (m_reservationId == -1) {
-        if (!ReservationDAO::add(r)) QMessageBox::critical(this, "Erreur", "Impossible d'ajouter la réservation.");
+        if (!ReservationFonction::add(r)) QMessageBox::critical(this, "Erreur", "Impossible d'ajouter la réservation.");
     } else {
         r.id = m_reservationId;
-        if (!ReservationDAO::update(r)) QMessageBox::critical(this, "Erreur", "Impossible de mettre à jour la réservation.");
+        if (!ReservationFonction::update(r)) QMessageBox::critical(this, "Erreur", "Impossible de mettre à jour la réservation.");
     }
     accept();
 }

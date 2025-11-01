@@ -80,6 +80,9 @@ public:
 
         retranslateUi(ReservationDialog);
 
+        btnSave->setDefault(true);
+
+
         QMetaObject::connectSlotsByName(ReservationDialog);
     } // setupUi
 

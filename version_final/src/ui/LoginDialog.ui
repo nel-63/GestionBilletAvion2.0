@@ -2,25 +2,64 @@
 <ui version="4.0">
  <class>LoginDialog</class>
  <widget class="QDialog" name="LoginDialog">
-  <property name="windowTitle"><string>Authentification</string></property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>193</width>
+    <height>126</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Authentification</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="titleLabel">
-     <property name="text"><string>Bienvenue - Gestion Réservations</string></property>
-     <property name="alignment"><set>Qt::AlignCenter</set></property>
+     <property name="text">
+      <string>Bienvenue - Gestion Réservations</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignmentFlag::AlignCenter</set>
+     </property>
     </widget>
    </item>
-   <item><widget class="QLineEdit" name="lineUsername"><property name="placeholderText"><string>Nom d'utilisateur</string></property></widget></item>
+   <item>
+    <widget class="QLineEdit" name="lineUsername">
+     <property name="placeholderText">
+      <string>Nom d'utilisateur</string>
+     </property>
+    </widget>
+   </item>
    <item>
     <widget class="QLineEdit" name="linePassword">
-     <property name="echoMode"><enum>QLineEdit::Password</enum></property>
-     <property name="placeholderText"><string>Mot de passe</string></property>
+     <property name="echoMode">
+      <enum>QLineEdit::EchoMode::Password</enum>
+     </property>
+     <property name="placeholderText">
+      <string>Mot de passe</string>
+     </property>
     </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="buttonLayout">
-     <item><widget class="QPushButton" name="btnCancel"><property name="text"><string>Annuler</string></property></widget></item>
-     <item><widget class="QPushButton" name="btnLogin"><property name="text"><string>Se connecter</string></property></widget></item>
+     <item>
+      <widget class="QPushButton" name="btnCancel">
+       <property name="text">
+        <string>Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnLogin">
+       <property name="text">
+        <string>Se connecter</string>
+       </property>
+       <property name="default">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>

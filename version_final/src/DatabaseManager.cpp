@@ -31,7 +31,6 @@ bool DatabaseManager::openConnection() {
     db.setPort(3306);
     db.setPassword("thegoatisback*");
 
-    //  3. Tentative d'ouverture de la connexion
     if (!db.open()) {
         qDebug() << "Échec de la connexion MySQL:" << db.lastError().text();
         QMessageBox::critical(nullptr, "Erreur BDD",

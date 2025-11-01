@@ -1,6 +1,6 @@
 #include "ClientDialog.h"
 #include "ui_ClientDialog.h"
-#include "../dao/ClientDAO.h"
+#include "../dao/ClientFonction.h"
 #include <QMessageBox>
 
 ClientDialog::ClientDialog(QWidget *parent, int clientId)
@@ -16,7 +16,7 @@ ClientDialog::~ClientDialog() { delete ui; }
 
 void ClientDialog::loadClient()
 {
-    auto c = ClientDAO::byId(m_clientId);
+    auto c = ClientFonction::byId(m_clientId);
     ui->lineNom->setText(c.nom);
     ui->linePrenom->setText(c.prenom);
     ui->lineEmail->setText(c.email);
@@ -37,10 +37,10 @@ void ClientDialog::on_btnSave_clicked()
     }
 
     if (m_clientId == -1) {
-        if (!ClientDAO::add(c)) QMessageBox::critical(this, "Erreur", "Impossible d'ajouter le client.");
+        if (!ClientFonction::add(c)) QMessageBox::critical(this, "Erreur", "Impossible d'ajouter le client.");
     } else {
         c.id = m_clientId;
-        if (!ClientDAO::update(c)) QMessageBox::critical(this, "Erreur", "Impossible de mettre à jour le client.");
+        if (!ClientFonction::update(c)) QMessageBox::critical(this, "Erreur", "Impossible de mettre à jour le client.");
     }
     accept();
 }

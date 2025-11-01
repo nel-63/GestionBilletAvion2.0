@@ -131,6 +131,9 @@ public:
 
         retranslateUi(VolDialog);
 
+        btnSave->setDefault(true);
+
+
         QMetaObject::connectSlotsByName(VolDialog);
     } // setupUi
 

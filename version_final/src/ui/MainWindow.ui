@@ -100,12 +100,20 @@
     </item>
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="pageDashboard">
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QLabel" name="lblDashboardTitle">
+          <property name="styleSheet">
+           <string notr="true">font-size: 40px;
+text-align: center;
+color :white;</string>
+          </property>
           <property name="text">
-           <string>Tableau de bord</string>
+           <string>                            aperçu</string>
           </property>
          </widget>
         </item>
@@ -113,6 +121,11 @@
          <layout class="QHBoxLayout" name="statsLayout">
           <item>
            <widget class="QLabel" name="lblTotalVols">
+            <property name="styleSheet">
+             <string notr="true">font-size: 30px;
+text-align: center;
+color :white;</string>
+            </property>
             <property name="text">
              <string>Vols: 0</string>
             </property>
@@ -120,6 +133,11 @@
           </item>
           <item>
            <widget class="QLabel" name="lblTotalClients">
+            <property name="styleSheet">
+             <string notr="true">font-size: 30px;
+text-align: center;
+color :white;</string>
+            </property>
             <property name="text">
              <string>Clients: 0</string>
             </property>
@@ -127,6 +145,11 @@
           </item>
           <item>
            <widget class="QLabel" name="lblTotalReservations">
+            <property name="styleSheet">
+             <string notr="true">font-size: 30px;
+text-align: center;
+color :white;</string>
+            </property>
             <property name="text">
              <string>Réservations: 0</string>
             </property>
@@ -143,7 +166,7 @@
           <item>
            <widget class="QLineEdit" name="lineClientSearch">
             <property name="placeholderText">
-             <string>Rechercher un client...</string>
+             <string>Rechercher Ex  id:2  nom:Dupont emai:Dupont@gmail.com</string>
             </property>
            </widget>
           </item>
@@ -182,7 +205,7 @@
           <item>
            <widget class="QLineEdit" name="lineVolSearch">
             <property name="placeholderText">
-             <string>Rechercher un vol...</string>
+             <string>Recherche  Ex  id:1  code:AE13  date:2025-10-30  heure:08:30&lt;heure  prix:500&lt;prix&lt;1000</string>
             </property>
            </widget>
           </item>
@@ -218,6 +241,13 @@
        <layout class="QVBoxLayout" name="verticalLayout_5">
         <item>
          <layout class="QHBoxLayout" name="reservActions">
+          <item>
+           <widget class="QLineEdit" name="lineResSearch">
+            <property name="placeholderText">
+             <string>Recherche Ex id:5 destination:paris date:2024-11-10</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QPushButton" name="btnResAdd">
             <property name="text">

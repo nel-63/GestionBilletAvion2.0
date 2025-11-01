@@ -35,6 +35,7 @@ public:
     {
         if (ClientDialog->objectName().isEmpty())
             ClientDialog->setObjectName("ClientDialog");
+        ClientDialog->resize(186, 164);
         verticalLayout = new QVBoxLayout(ClientDialog);
         verticalLayout->setObjectName("verticalLayout");
         lineNom = new QLineEdit(ClientDialog);
@@ -74,6 +75,9 @@ public:
 
 
         retranslateUi(ClientDialog);
+
+        btnSave->setDefault(true);
+
 
         QMetaObject::connectSlotsByName(ClientDialog);
     } // setupUi

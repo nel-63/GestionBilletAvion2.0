@@ -40,6 +40,7 @@ private slots:
     void on_btnResEdit_clicked();
     void on_btnResDelete_clicked();
     void on_btnPrintTicket_clicked();
+    void on_lineResSearch_textChanged(const QString &term);
 
 private:
     Ui::MainWindow *ui;

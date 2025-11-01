@@ -1,8 +1,8 @@
 debug/DatabaseManager.o
+debug/ClientFonction.o
+debug/ReservationFonction.o
+debug/VolFonction.o
 debug/main.o
-debug/ClientDAO.o
-debug/VolDAO.o
-debug/ReservationDAO.o
 debug/MainWindow.o
 debug/LoginDialog.o
 debug/ClientDialog.o
