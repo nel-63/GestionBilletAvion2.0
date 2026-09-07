@@ -1,4 +1,4 @@
-# ✈️ GestionBilletAvion2.0
+# ✈️ GestionBilletAvion2.(projet personnel)
 
 Application desktop de gestion de réservations et de billets d'avion développée en **C++ avec Qt**.
 
